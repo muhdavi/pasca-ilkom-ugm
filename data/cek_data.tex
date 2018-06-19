@@ -1,0 +1,127 @@
+\begin{center}
+\includegraphics[scale=.7]{logougm} \\ [.2cm]
+\textsc{\LARGE \@university} \\ 
+\textsc{\Large \@faculty} \\ 
+\textsc{\large \@dept} \\
+\textsc{\large \@city} \\ [2.5cm] 	% Upper part of the page
+	\textsc{\Large \@titleind}		\\ [2cm]	% Title
+
+	\HRule	\\
+	[0.4cm]
+	{\huge\bfseries Document \@program}	\\
+	[0.4cm]
+	\HRule 	\\
+	[2cm]
+	
+	\begin{minipage}{0.35\textwidth}
+	\begin{flushleft} \large
+		\emph{Student:}	\\
+		\@fullname
+	\end{flushleft}
+	\end{minipage}		
+	\begin{minipage}{0.55\textwidth}
+	\begin{flushright} \large
+		\emph{Supervisor:}	\\
+		\@firstsupervisor
+	\end{flushright}
+	\end{minipage}
+	
+	\vfill
+	
+	% Bottom of the page
+	{\large \today}
+\end{center}
+
+\newpage
+\thispagestyle{empty}
+\begin{center}
+{\normalfont\Large\bfseries\expandafter{Halaman Pengecekan Data}}
+\par\nobreak
+
+\vspace{.5cm}
+\normalsize
+\onehalfspacing
+\begin{tabbing}
+	\HRule	\\
+	{\bfseries Data Mahasiswa}	\\
+	\HRule 	\\
+	Nama Lengkap Mahasiswa 	\= 	: \@fullname \\
+	NIM						\>	: \@idnum \\
+	E-Mail					\>	: \@email \\
+	Bidang Minat			\>	: \@minat \\
+	Alamat					\>	: \@alamat \\
+	Tempat/tanggal lahir	\>	: \@tmplahir, \@tgllahir \\
+	Agama					\>	: \@agama\\
+	Telpon					\>	: 1. Rumah: \@noRumah \\
+							\>	: 2. Kantor: \@noKantor \\
+							\>	: 3. No. HP: \@noHP \\
+	Status					\>	: Lingkari yang sesuai (Nikah atau Belum Nikah) \\
+	Tanggal Masuk S2		\>	: \@mastermasuk \\
+							\>	: Th. Akademik \@thakademikmasuk \space Semester ke-\@semestermasuk \\
+	Tanggal Lulus S2		\>	: \@masterlulus \space (Tanggal Yudisium)\\
+							\>	: Th. Akademik \@thakademiklulus \space Semester ke-\@semesterlulus \\
+	Nilai TOEFL/AcEPT		\>	: \@nilaiTestEnglish \space pada tahun \@tahunTest \\
+	Pekerjaan				\>	: \@job \\
+	Instansi				\>	: \@instansi \\
+	Alamat Instansi			\>	: \@instansialamat \\
+	Telp.					\>	: \@instansitelp \\	
+	\HRule	\\
+	{\bfseries Data Kampus}	\\
+	\HRule 	\\
+	Degree					\>	: \@degree \\
+	Program Studi			\>	: \@program \\
+	Jurusan					\>	: \@jurusan \\
+	Departemen				\>	: \@dept \\
+	Fakultas				\>	: \@faculty \\
+	Universitas				\>	: \@university \\
+	Kota					\>	: \@city \\
+	\HRule	\\
+	{\bfseries Data Kampus Asal (S1)}	\\
+	\HRule 	\\
+	Program Studi Asal		\>	: \@prodiasal \\
+	Jurusan Asal			\>	: \@jurusanasal \\
+	Fakultas Asal			\>	: \@facultyasal \\
+	Universitas Asal		\>	: \@universityasal \\
+	IPK S1					\>	: \@ipkasal \\
+	Tahun Lulus S1			\>	: \@tahunlulusasal \\
+	\HRule	\\
+	{\bfseries Data Pembimbing dan Penguji}	\\
+	\HRule 	\\
+	Pembimbing 1			\> 	: \@firstsupervisor \\
+	Pembimbing NIP 1		\>	: \@firstsupervisornip \\
+	Pembimbing 2			\>	: \@secondsupervisor \\
+	Pembimbing 2 NIP		\>	: \@secondsupervisornip \\
+	Penguji 1				\>	: \@firstexaminer \\
+	Penguji 1 NIP			\>	: \@firstexaminernip \\
+	Penguji 2				\>	: \@secondexaminer \\
+	Penguji 2 NIP			\>	: \@secondexaminernip \\
+	Penguji 3				\>	: \@thirdexaminer \\
+	Penguji 3 NIP			\>	: \@thirdexaminernip \\
+	\HRule	\\
+	{\bfseries Data Pejabat}	\\
+	\HRule 	\\
+	Dekan FMIPA				\>	: \@headdept \\
+	Dekan FMIPA NIP			\>	: \@headdeptnip \\
+	Ka. Program Studi		\>	: \@headprogram \\
+	Ka. Program Studi NIP	\>	: \@headprogramnip \\
+	Admin S2 ILKOM			\>	: \@adminS2ILKOM \\ [3cm]
+	\HRule	\\
+	{\bfseries Data Tesis atau Proposal}	\\
+	\HRule 	\\
+	Judul (Indonesia)		\>	: \@titleind \\
+	Judul (English)			\>	: \@titleeng \\	
+	Hari Ujian				\>	: \@examday \\
+	Tanggal Ujian			\>	: \@examdate \\
+	Pukul Ujian	 			\>	: \@examtime \\
+	\HRule	\\
+	{\bfseries Data Rekap Hasil Studi}	\\
+	\HRule 	\\	
+	Jml sks sblm batal		\>	: \@sksbatalsebelum \\
+	Jml sks ssdh batal		\>	: \@sksbatalsesudah \\
+	Jml sks yg dibatal		\>	: \@sksbatal \\
+	Jml sks nilai D			\>	: \@sksD \\
+	Matakuliah batal		\>	: \@matakuliahbatal \\
+	Kode Matakuliah batal	\>	: \@kodebatal \\
+	Nilai Matakuliah batal	\>	: \@nilaibatal \\
+\end{tabbing}
+\end{center}

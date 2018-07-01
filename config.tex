@@ -1,0 +1,257 @@
+\RequirePackage[english, bahasa]{babel} 	% paket bahasa
+\RequirePackage{etoolbox}				% untuk daftar isi
+\RequirePackage{setspace}
+\RequirePackage{indentfirst}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{times}
+\RequirePackage{graphicx,latexsym}
+
+\usepackage{tocloft} 					% untuk daftar isi
+\usepackage{amsfonts, amsmath, amssymb, array}
+\usepackage[bookmarks]{hyperref}
+\usepackage{bookmark, booktabs, bbding}
+\usepackage{calc}						% untuk chapter dan daftar isi
+\usepackage{ulem}
+
+\usepackage[thinlines]{easytable}
+\usepackage{wrapfig}
+
+\usepackage[inline]{enumitem}
+\usepackage{fontawesome}
+\usepackage{float}						% ugmtesis
+\usepackage{lscape, ltablex}
+\usepackage{microtype}
+\usepackage{multirow}					% ugmtesis
+\usepackage{natbib}
+\usepackage{paralist, pdflscape, pifont}
+\usepackage{placeins}					% ugmtesis
+\usepackage{subfig}
+\usepackage{tabularx, titlesec}
+\usepackage{wasysym}
+\usepackage{xpatch}						% remove gap between chapter in list of figure
+
+%untuk tabel
+\usepackage[utf8]{inputenc}
+\usepackage[table]{xcolor}
+\usepackage{longtable}					% ugmtesis
+
+\usepackage{csquotes}					% ugmtesis
+
+% untuk bingkai
+\usepackage{tikz}
+\usetikzlibrary{fit}
+\usetikzlibrary{calc}
+
+\usepackage{multido}
+
+\usepackage{verbatim}					%multiple coment
+
+\usepackage{geometry}
+
+\usepackage{pdfpages}	% include pdf file
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	citecolor=black,
+	filecolor=magenta,
+	urlcolor=blue,
+}
+\bookmarksetup{
+	numbered, 
+	open,
+}
+\urlstyle{same}
+
+% menghilangkan space antar item di enumarate
+\let\itemize\compactitem
+\let\enditemize\endcompactitem
+\let\enumerate\compactenum
+\let\endenumerate\endcompactenum
+\let\description\compactdesc
+\let\enddescription\endcompactdesc
+\pltopsep=1pt
+\plitemsep=1pt
+\plparsep=1pt
+%-----------------------------------
+
+% membuat ... pada daftar isi untuk section
+\makeatletter
+\patchcmd{\l@section}
+{\hfil}
+{\leaders\hbox{\normalfont$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill}
+
+%------------------------------------------------------------]
+%Define thesis's inputs
+%------------------------------------------------------------
+\gdef\@university{Universitas Gadjah Mada}
+\gdef\@faculty{Fakultas Matematika dan Ilmu Pengetahuan Alam}
+\gdef\@dept{Departemen Ilmu Komputer dan Elektronika}
+\gdef\@program{S2 Ilmu Komputer}
+\gdef\@jurusan{Ilmu-Ilmu MIPA}
+\gdef\@degree{Master of Science}
+\gdef\@city{Yogyakarta}
+\gdef\@adminS2ILKOM{Sudarini}
+\gdef\@headprogram{Dr. Tri Kuntoro Priyambodo, M.Sc.}
+\gdef\@headprogramnip{NIP. 19591121 1988 03 1 001}
+\gdef\@headdept{Prof. Dr. Triyono, S.U.}
+\gdef\@headdeptnip{NIP. 19600921 1986 02 1 001}
+
+\newcommand{\titleind}[1]{\gdef\@titleind{#1}}
+\newcommand{\@titleind}{}
+\newcommand{\subtitleind}[1]{\gdef\@subtitleind{#1}}
+\newcommand{\@subtitleind}{}
+\newcommand{\titleeng}[1]{\gdef\@titleeng{#1}}
+\newcommand{\@titleeng}{}
+\newcommand{\subtitleeng}[1]{\gdef\@subtitleeng{#1}}
+\newcommand{\@subtitleeng}{}
+
+\newcommand{\fullname}[1]{\gdef\@fullname{#1}}
+\newcommand{\@fullname}{}
+\newcommand{\idnum}[1]{\gdef\@idnum{#1}}
+\newcommand{\@idnum}{}
+\newcommand{\minat}[1]{\gdef\@minat{#1}}
+\newcommand{\@minat}{}
+\newcommand{\yearsubmit}[1]{\gdef\@yearsubmit{#1}}
+\newcommand{\@yearsubmit}{}
+
+\newcommand{\examdate}[1]{\gdef\@examdate{#1}}
+\newcommand{\@examdate}{\number\day~\ifcase\month\or
+	Januari\or Pebruari\or Maret\or April\or Mei\or Juni\or
+	Juli\or Agustus\or September\or Oktober\or Nopember\or Desember\fi
+	\space \number\year}
+\newcommand{\examday}[1]{\gdef\@examday{#1}}
+\newcommand{\@examday}{}
+\newcommand{\examtime}[1]{\gdef\@examtime{#1}}
+\newcommand{\@examtime}{}
+\newcommand{\dateapprove}[1]{\gdef\@dateapprove{#1}}
+\newcommand{\@dateapprove}{}
+
+\newcommand{\firstsupervisor}[1]{\gdef\@firstsupervisor{#1}}
+\newcommand{\@firstsupervisor}{}
+\newcommand{\firstsupervisornip}[1]{\gdef\@firstsupervisornip{#1}}
+\newcommand{\@firstsupervisornip}{}
+\newcommand{\secondsupervisor}[1]{\gdef\@secondsupervisor{#1}}
+\newcommand{\@secondsupervisor}{}
+\newcommand{\secondsupervisornip}[1]{\gdef\@secondsupervisornip{#1}}
+\newcommand{\@secondsupervisornip}{}
+
+\newcommand{\firstexaminer}[1]{\gdef\@firstexaminer{#1}}%
+\newcommand{\@firstexaminer}{}
+\newcommand{\firstexaminernip}[1]{\gdef\@firstexaminernip{#1}}
+\newcommand{\@firstexaminernip}{}
+\newcommand{\secondexaminer}[1]{\gdef\@secondexaminer{#1}}%
+\newcommand{\@secondexaminer}{}
+\newcommand{\secondexaminernip}[1]{\gdef\@secondexaminernip{#1}}
+\newcommand{\@secondexaminernip}{}
+\newcommand{\thirdexaminer}[1]{\gdef\@thirdexaminer{#1}}%
+\newcommand{\@thirdexaminer}{}
+\newcommand{\thirdexaminernip}[1]{\gdef\@thirdexaminernip{#1}}
+\newcommand{\@thirdexaminernip}{}
+
+\newcommand{\noRumah}[1]{\gdef\@noRumah{#1}}
+\newcommand{\@noRumah}{}
+\newcommand{\noKantor}[1]{\gdef\@noKantor{#1}}
+\newcommand{\@noKantor}{}
+\newcommand{\noHP}[1]{\gdef\@noHP{#1}}
+\newcommand{\@noHP}{}
+\newcommand{\email}[1]{\gdef\@email{#1}}
+\newcommand{\@email}{}
+\newcommand{\angkatan}[1]{\gdef\@angkatan{#1}}
+\newcommand{\@angkatan}{}
+
+\newcommand{\ipkasal}[1]{\gdef\@ipkasal{#1}}
+\newcommand{\@ipkasal}{}
+\newcommand{\tahunlulusasal}[1]{\gdef\@tahunlulusasal{#1}}
+\newcommand{\@tahunlulusasal}{}
+\newcommand{\prodiasal}[1]{\gdef\@prodiasal{#1}}
+\newcommand{\@prodiasal}{}
+\newcommand{\jurusanasal}[1]{\gdef\@jurusanasal{#1}}
+\newcommand{\@jurusanasal}{}
+\newcommand{\facultyasal}[1]{\gdef\@facultyasal{#1}}
+\newcommand{\@facultyasal}{}
+\newcommand{\universityasal}[1]{\gdef\@universityasal{#1}}
+\newcommand{\@universityasal}{}
+
+\newcommand{\alamat}[1]{\gdef\@alamat{#1}}
+\newcommand{\@alamat}{}
+\newcommand{\tmplahir}[1]{\gdef\@tmplahir{#1}}
+\newcommand{\@tmplahir}{}
+\newcommand{\tgllahir}[1]{\gdef\@tgllahir{#1}}
+\newcommand{\@tgllahir}{}
+\newcommand{\sksbatal}[1]{\gdef\@sksbatal{#1}}
+\newcommand{\@sksbatal}{}
+\newcommand{\sksbatalsebelum}[1]{\gdef\@sksbatalsebelum{#1}}
+\newcommand{\@sksbatalsebelum}{}
+\newcommand{\sksbatalsesudah}[1]{\gdef\@sksbatalsesudah{#1}}
+\newcommand{\@sksbatalsesudah}{}
+\newcommand{\sksD}[1]{\gdef\@sksD{#1}}
+\newcommand{\@sksD}{}
+\newcommand{\matakuliahbatal}[1]{\gdef\@matakuliahbatal{#1}}
+\newcommand{\@matakuliahbatal}{}
+\newcommand{\kodebatal}[1]{\gdef\@kodebatal{#1}}
+\newcommand{\@kodebatal}{}
+\newcommand{\nilaibatal}[1]{\gdef\@nilaibatal{#1}}
+\newcommand{\@nilaibatal}{}
+\newcommand{\agama}[1]{\gdef\@agama{#1}}
+\newcommand{\@agama}{}
+
+\newcommand{\mastermasuk}[1]{\gdef\@mastermasuk{#1}}
+\newcommand{\@mastermasuk}{}
+\newcommand{\masterlulus}[1]{\gdef\@masterlulus{#1}}
+\newcommand{\@masterlulus}{}
+\newcommand{\thakademikmasuk}[1]{\gdef\@thakademikmasuk{#1}}
+\newcommand{\@thakademikmasuk}{}
+\newcommand{\thakademiklulus}[1]{\gdef\@thakademiklulus{#1}}
+\newcommand{\@thakademiklulus}{}
+\newcommand{\semesterlulus}[1]{\gdef\@semesterlulus{#1}}
+\newcommand{\@semesterlulus}{}
+\newcommand{\semestermasuk}[1]{\gdef\@semestermasuk{#1}}
+\newcommand{\@semestermasuk}{}
+
+\newcommand{\nilaiTestEnglish}[1]{\gdef\@nilaiTestEnglish{#1}}
+\newcommand{\@nilaiTestEnglish}{}
+\newcommand{\tahunTest}[1]{\gdef\@tahunTest{#1}}
+\newcommand{\@tahunTest}{}
+\newcommand{\job}[1]{\gdef\@job{#1}}
+\newcommand{\@job}{}
+\newcommand{\instansi}[1]{\gdef\@instansi{#1}}
+\newcommand{\@instansi}{}
+\newcommand{\instansialamat}[1]{\gdef\@instansialamat{#1}}
+\newcommand{\@instansialamat}{}
+\newcommand{\instansitelp}[1]{\gdef\@instansitelp{#1}}
+\newcommand{\@instansitelp}{}
+
+\usepackage{enumitem}
+\setlist{parsep=0pt,listparindent=\parindent,
+	itemindent=1.5em,labelsep=2em,wide=\parindent
+}
+
+\patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{}
+\patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}
+
+%untuk bingkai
+\newcommand\HRule{\rule{\textwidth}{1pt}}
+
+\newcommand{\head}[1]{\textnormal{\textbf{#1}}}
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+\newcounter{colnumbers}
+\newcommand{\colnumber}{\stepcounter{colnumbers}\arabic{colnumbers}}
+\newcounter{rownumbers}
+\newcommand{\rownumber}{\stepcounter{rownumbers}\arabic{rownumbers}}
+
+\newcommand{\soutthick}[1]{%
+    \renewcommand{\ULthickness}{2.4pt}%
+       \sout{#1}%
+    \renewcommand{\ULthickness}{.4pt}% Resetting to ulem default
+}
+
+\newcommand{\Pointilles}[2][3]{%\par\nobreak
+  \noindent\rule{0pt}{\baselineskip}% Provides a larger gap between the preceding paragraph and the dots
+  \multido{}{#2}{\noindent\makebox[0.8\linewidth]{\rule{0pt}{#1\baselineskip}\dotfill}\endgraf}% ... dotted lines ...
+  % \bigskip Gap between dots and next paragraph
+}
+
+%circled string
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,ultra thick,inner sep=2pt] (char) {#1};}}

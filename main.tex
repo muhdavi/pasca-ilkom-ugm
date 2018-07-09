@@ -6,9 +6,20 @@
 	\pagenumbering{gobble}
 	\input{data/data}
 	\input{data/cek_data}
-	\include{input/proposal}
+	
+	% untuk yang hanya memiliki 1 pembimbing
+	%\include{input/proposal}
 	%\include{input/tesis}
-	\include{input/pratesis}
+	%\include{input/pratesis}
 	%\include{input/pascatesis}
-	%\includepdf[page=1-4]{input/lampiran_wisuda.pdf}
+	
+	% untuk yang memiliki 2 pembimbing
+	\include{input/proposal_2nd}
+	\include{input/tesis_2nd}
+	\include{input/pratesis_2nd}
+	\include{input/pascatesis_2nd}
+
+	% contoh hasil dari isian form wisuda	
+	\includepdf[page=1-4]{input/lampiran_wisuda.pdf}
+
 \end{document}

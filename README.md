@@ -7,7 +7,6 @@ Langkah-langkah menggunakan:
 3. buka file data.tex dan isi data sesusai dengan data saudara.
 4. buka file main.tex menggunakan ide latex (texmaker/texstudio)
 5. compile maka akan menghasilkan file pdf.
-6. jika berhasil compile ubah file contoh_data.tex sesuai data Anda.
-7. jika error. please contact us with WA 0853 2958 3423
+6. jika error. dapat memberitahu saya melalui nomor berikut: 0853 2958 3423
 
 Semoga bermanfaat!

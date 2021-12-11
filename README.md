@@ -1,4 +1,4 @@
-# S2 ILKOM UGM
+# PASCA ILKOM UGM
 surat-surat dan form-form yang dibutuhkan untuk ujian tesis, pra tesis dan mengurus yudisium.
 
 Langkah-langkah menggunakan:
